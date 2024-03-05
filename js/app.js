@@ -1,5 +1,8 @@
 // Dichiaro le variabili degli input
 
+const inputNameElement = document.getElementById('name');
+console.log(inputNameElement);
+
 const inputDistanceElement = document.getElementById('distance');
 console.log(inputDistanceElement);
 
@@ -13,6 +16,7 @@ console.log(submitElement);
 // aggiungo il listener del clic sul pulsante
 submitElement.addEventListener('click', function () {
 
+    name = inputNameElement.value
     distanza = inputDistanceElement.value 
     eta = selectAgeElement.value
 
@@ -26,6 +30,7 @@ let total = distanza * 0.21; //number
 let sconto;
 
 if(eta === 'minorenne') {
+    console.log(name);
     sconto = total * 0.20;
     total = total - sconto;
     console.log(total.toFixed(2));
@@ -34,6 +39,7 @@ if(eta === 'minorenne') {
 // ALTRIMENTI SE il passeggero è un over 65 avrà uno sconto del 40%
 
  else if(eta === 'over') {
+    console.log(name);
     sconto = total * 0.40;
     total = total - sconto;
     console.log(total.toFixed(2));
@@ -42,6 +48,7 @@ if(eta === 'minorenne') {
 // ALTRIMENTI stampa il prezzo fisso
 
  else {
+    console.log(name);
     console.log(total.toFixed(2));
  }
 
