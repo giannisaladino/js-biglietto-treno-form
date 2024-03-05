@@ -10,17 +10,28 @@
     <main>
 
         <section>
+
+            <div>
+                <label for="name">Nome e cognome</label>
+                <input name="name" id="name" type="text"/>
+            </div>
+
             <div>
                 <label for="distance">Km da percorrere</label>
                 <input name="distance" id="distance" type="text" placeholder="Distanza da percorrere" />
             </div>
             <div>
-                <label for="age">Età del passeggero</label>
-                <input name="age" id="age" type="text" placeholder="Età" />
+                <label for="select">Fascia di età</label>
+                <select name="age" id="select">
+                    <option value="nessuno">Nessuno di questi</option>
+                    <option value="minorenne">Minorenne</option>
+                    <option value="over">Over 65</option>
+                </select>
             </div>
             <div>
                 <input id="submit" type="submit" value="Invia" />
             </div>
+
         </section>
 
     </main>

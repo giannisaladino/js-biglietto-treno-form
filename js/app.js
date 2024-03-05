@@ -3,8 +3,8 @@
 const inputDistanceElement = document.getElementById('distance');
 console.log(inputDistanceElement);
 
-const inputAgeElement = document.getElementById('age');
-console.log(inputAgeElement);
+const selectAgeElement = document.getElementById('select');
+console.log(selectAgeElement);
 
 const submitElement = document.getElementById('submit');
 console.log(submitElement);
@@ -14,7 +14,7 @@ console.log(submitElement);
 submitElement.addEventListener('click', function () {
 
     distanza = inputDistanceElement.value 
-    eta = inputAgeElement.value
+    eta = selectAgeElement.value
 
  // 3 Calcolare il prezzo totale del viaggio in base all'età del passeggero
 const prezzo = 0.21; //number
@@ -25,7 +25,7 @@ let total = distanza * 0.21; //number
 
 let sconto;
 
-if(eta < 18) {
+if(eta === 'minorenne') {
     sconto = total * 0.20;
     total = total - sconto;
     console.log(total.toFixed(2));
@@ -33,7 +33,7 @@ if(eta < 18) {
 
 // ALTRIMENTI SE il passeggero è un over 65 avrà uno sconto del 40%
 
- else if(eta > 65) {
+ else if(eta === 'over') {
     sconto = total * 0.40;
     total = total - sconto;
     console.log(total.toFixed(2));
